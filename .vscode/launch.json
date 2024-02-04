@@ -2,14 +2,66 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/main",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": false
+        }
+      ],
+      "windows": {
+        "miDebuggerPath": "C:/raylib/mingw/bin/gdb.exe"
+      },
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "linux": {
+        "miDebuggerPath": "/usr/bin/gdb"
+      },
+      "preLaunchTask": "build debug"
+    },
+    {
+      "name": "Run",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "program": "${workspaceFolder}/main",
+      "MIMode": "gdb",
+      "windows": {
+        "program": "${workspaceFolder}/main.exe",
+        "miDebuggerPath": "C:/raylib/mingw/bin/gdb.exe"
+      },
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "linux": {
+        "miDebuggerPath": "/usr/bin/gdb"
+      },
+      "preLaunchTask": "build release"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/rkbli/Documents/Projects/Gamedevtv-CPP",
-      "program": "c:/Users/rkbli/Documents/Projects/Gamedevtv-CPP/build/Debug/outDebug",
+      "cwd": "c:/Users/rkbli/Documents/Projects/Gamedev.tv-CPP",
+      "program": "c:/Users/rkbli/Documents/Projects/Gamedev.tv-CPP/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
